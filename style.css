@@ -1,22 +1,22 @@
 /* Estilos Gerais */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-image: radial-gradient(
-        64.64% 100% at 50% 0%, 
-        rgba(124, 140, 149, 0.50) 0%, 
-        rgba(196, 203, 207, 0.50) 0.01%, 
-        #42566A 0.10%, 
-        #0B1522 74.51%
-    );
-    min-height: 100vh;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+  background-image: radial-gradient(
+    64.64% 100% at 50% 0%,
+    rgba(124, 140, 149, 0.5) 0%,
+    rgba(196, 203, 207, 0.5) 0.01%,
+    #42566a 0.1%,
+    #0b1522 74.51%
+  );
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .main {
@@ -24,65 +24,65 @@ body {
 }
 /* Header */
 .interface {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 5%;
-    background-color: #0B1522;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background-color: #0b1522;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* Menu Desktop */
 .menu-lista {
-    display: flex;
-    gap: 2.5rem;
-    list-style: none;
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
 }
 
 .menu-link {
-    color: #FFF;
-    text-decoration: none;
-    font-family: 'Monda', sans-serif;
-    font-size: 1.1rem; /* 24px equivalente */
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    transition: all 0.3s ease; /* Animação suave */
-    position: relative; /* Para o sublinhado animado */
+  color: #fff;
+  text-decoration: none;
+  font-family: "Monda", sans-serif;
+  font-size: 1.1rem; /* 24px equivalente */
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease; /* Animação suave */
+  position: relative; /* Para o sublinhado animado */
 }
 
 /* EFEITO HOVER NOS LINKS */
 
 .menu-link:hover {
-    opacity: 0.8; 
-    transform: translateY(-2px); /* Movimento para cima */
+  opacity: 0.8;
+  transform: translateY(-2px); /* Movimento para cima */
 }
 
 .menu-link.ativo::after {
-    content: '';
-    position: absolute;
-    bottom: -8px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: #7C8C95;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #7c8c95;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* Botão Contato */
 .btn-contato {
-    background: #42566A;
-    color: #FFF;
-    padding: 12px 32px;
-    border: none;
-    border-radius: 8px;
-    font-family: 'Monda', sans-serif;
-    font-size: 1.0rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
+  background: #42566a;
+  color: #fff;
+  padding: 12px 32px;
+  border: none;
+  border-radius: 8px;
+  font-family: "Monda", sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .btn-contato:hover {
-    background: #7C8C95;
-    transform: scale(1.05);
+  background: #7c8c95;
+  transform: scale(1.05);
 }
 
 /* JAEL WILKER. DEV */
@@ -96,7 +96,7 @@ body {
 
 .jael-wilker-dev-span1 {
   color: #f5f5f5;
-  font-family: 'Montagu Slab';
+  font-family: "Montagu Slab";
   height: 101px;
   font-size: 68px;
   letter-spacing: 0.01em;
@@ -105,62 +105,92 @@ body {
 
 .jael-wilker-dev-span2 {
   color: #d4f117;
-  font-family: 'Montagu Slab';
+  font-family: "Montagu Slab";
   font-size: 36px;
   letter-spacing: 0.01em;
   font-weight: 700;
 }
 .jael-wilker-dev-span3 {
   color: #d4f117;
-  font-family: 'Montagu Slab'; 
+  font-family: "Montagu Slab";
   font-size: 25px;
   letter-spacing: 0.01em;
   font-weight: 700;
 }
 
 .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: start;
-    justify-content: center;
-    max-width: 800px;
-    margin: 2rem auto;
-    text-align: left;
-    flex-grow: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+  justify-content: center;
+  max-width: 800px;
+  margin: 2rem auto;
+  text-align: left;
+  flex-grow: 1;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    text-align: center; /* Centraliza os textos */
+    padding: 1rem; /* Adiciona espaço interno */
   }
 
-  .grid div {
-    padding: 1.0rem;
-    border-radius: 8px;
+  h1 {
+    font-size: 1.8rem;
   }
 
-  .grid h2 {
-    font-family: 'MontaguSlab';
-    color: #FFF;
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 13px;
+  p {
+    font-size: 1rem;
+  }
+
+  nav {
+    flex-direction: column;
     text-align: center;
-    font-size: 21px;
-    font-style: normal;
-    line-height: normal;
   }
 
-
-  .grid p {
-    color: #FFF;
-    font-family: "Montserrat", serif;
-    font-weight: 300;
-    font-size: 17px;
-    text-align: center;
-    line-height: normal;
-    backdrop-filter: blur(3px);
+  nav a {
+    display: block;
+    padding: 0.5rem;
   }
 
-  /* direitos reservados */
+  .botao-contato {
+    margin-top: 1rem;
+    width: 100%;
+  }
+}
 
-  footer {
+.grid div {
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.grid h2 {
+  font-family: "MontaguSlab";
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 13px;
+  text-align: center;
+  font-size: 21px;
+  font-style: normal;
+  line-height: normal;
+}
+
+.grid p {
+  color: #fff;
+  font-family: "Montserrat", serif;
+  font-weight: 300;
+  font-size: 17px;
+  text-align: center;
+  line-height: normal;
+  backdrop-filter: blur(3px);
+}
+
+/* direitos reservados */
+
+footer {
   text-align: center;
   padding: 1rem;
   color: white;
@@ -170,14 +200,8 @@ body {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   width: 100%;
   margin-top: auto; /* Mantém o footer no final da página */
-  }
+}
 
-  footer b {
-    color: #d4f117;
-  }
-  
-
-
-
-
-
+footer b {
+  color: #d4f117;
+}

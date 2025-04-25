@@ -152,6 +152,7 @@ font-weight: 700;
   border-radius: 8px;
 }
 
+
 /* Responsividade no celular */
 @media (max-width: 768px) {
   .grid {
@@ -267,6 +268,26 @@ footer b {
   color: #d4f117;
 }
 
+.python_description {
+  font-family: "Montserrat", serif;
+  color: chartreuse;
+  backdrop-filter: blur(3px);
+  text-decoration: underline;
+}
+
+.django_description {
+  font-family: "Montserrat", serif;
+  color: #049ff9;
+  backdrop-filter: blur(3px);
+  text-decoration: underline;
+}
+
+.react_description {
+  font-family: "Montserrat", serif;
+  color: #61dafb;
+  backdrop-filter: blur(3px);
+  text-decoration: underline;
+}
 
 
 

@@ -1,58 +1,90 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio.dev</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <!--FONTES GOOGLES-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Monda:wght@400..700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monda:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
     <header>
-        <div class="interface">
-            <!-- Menu Desktop -->
-            <nav class="menu-desktop">
-                <ul class="menu-lista">
-                    <li><a href="#" class="menu-link ativo">Home</a></li>
-                    <li><a href="#" class="menu-link">Sobre mim</a></li>
-                    <li><a href="#" class="menu-link">Projetos</a></li>
-                </ul>
-            </nav>
-            <!-- Botão Contato -->
-            <div class="wk-contato">
-                <button class="btn-contato">Contato</button>
-            </div>
-            
-        </div>
+      <div class="interface">
+        <!-- Menu Desktop -->
+        <nav class="menu-desktop">
+          <ul class="menu-lista">
+            <li><a href="#" class="menu-link ativo">Home</a></li>
+            <li><a href="#" class="menu-link">Sobre mim</a></li>
+            <li><a href="#" class="menu-link">Projetos</a></li>
+          </ul>
+        </nav>
+        <!-- Botão Contato -->
+        <div class="wk-contato">
+          <button class="btn-contato" onclick="window.location.href= 'https://wa.me/5585988423560?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20seus%20serviços%20de%20desenvolvimento%20web!'" >Contato</button>
+      </div>
+      </div>
     </header>
     <main>
-         <section class="topo-do-site">
-            <div class="jaelwk-dev">
-                <div class="flex">
-                     <div class="jael-wilker-dev">
-                         <span>
-                          <span class="jael-wilker-dev-span1">Jael Wilker</span>
-                          <span class="jael-wilker-dev-span2">.</span>
-                          <span class="jael-wilker-dev-span3">dev</span>
-                         </span>
-                         <div class="grid">
-                              <div class="Descrição"> <h2>Descrição</h2>
-                                <p>Estou me especializando em Python, JavaScript, Node.JS, Next, HTML e CSS, com foco em Desenvolvimento Web. Desenvolvo também minhas habilidades Soft Skills através de atividades tech e musicais. Gosto de desafios, resolver problemas e, acima de tudo, criar soluções inovadoras. </p>
-                              </div>                             
-                              <div class="minha-missão"> <h2>Minha missão</h2>
-                                <p>Acredito que minha missão no mundo de TI, seja contribuir ativamente e impactar diretamente pelo menos uma pessoa em todos trabalhos que faço. Só assim terei o prazer de dizer que sou programador e ser merecedor do titulo de “engenheiro”, qual me formei na faculdade.</p></div>
-                         </div>
-                    </div>
+      <section class="topo-do-site">
+        <div class="jaelwk-dev">
+          <div class="flex">
+            <div class="jael-wilker-dev">
+              <span>
+                <span class="jael-wilker-dev-span1">Jael Wilker</span>
+                <span class="jael-wilker-dev-span2">.</span>
+                <span class="jael-wilker-dev-span3">dev</span>
+              </span>
+              <div class="container_icone">
+                <div class="jael-wilker-dev-icone">
+                  <img src="image/photo_jael.png" alt="Jael Wilker" />
                 </div>
+              </div>
+              <div class="grid">
+                <div class="Descrição">
+                  <h2>Descrição</h2>
+                  <p>
+                    Estou me especializando em Python, JavaScript, Node.JS,
+                    Next, HTML e CSS, com foco em Desenvolvimento Web.
+                    Desenvolvo também minhas habilidades Soft Skills através de
+                    atividades tech e musicais. Gosto de desafios, resolver
+                    problemas e, acima de tudo, criar soluções inovadoras.
+                  </p>
+                </div>
+                <div class="minha-missão">
+                  <h2>Minha missão</h2>
+                  <p>
+                    Acredito que minha missão no mundo de TI, seja contribuir
+                    ativamente e impactar diretamente pelo menos uma pessoa em
+                    todos trabalhos que faço. Só assim terei o prazer de dizer
+                    que sou programador e ser merecedor do titulo de
+                    “engenheiro”, qual me formei na faculdade.
+                  </p>            
+                </div>
+              </div>
+              <div class="container_cv">
+                <button href="document/Curriculo_Jaelwk.pdf" class="baixar_curriculo" onclick="baixarCV()">Baixar CV</button>
+             </div>
             </div>
-         </section>
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
-        <p>Este site foi desenvolvido por <br> <b>©2025 Jael Wilker</b>. Todos os direitos reservados.</p>
-      </footer>
-</body>
+      <p>
+        Este site foi desenvolvido por <br />
+        <b>©2025 Jael Wilker</b>. Todos os direitos reservados.
+      </p>
+    </footer>
+  </body>
 </html>

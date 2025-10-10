@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio.dev</title>
     <link rel="stylesheet" href="style.css" />
-    <!--FONTES GOOGLES-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,6 +15,10 @@
       href="https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
     <script src="script.js" defer></script>
   </head>
   <body>
@@ -24,19 +27,29 @@
         <!-- Menu Desktop -->
         <nav class="menu-desktop">
           <ul class="menu-lista">
-            <li><a href="#" class="menu-link ativo">Home</a></li>
-            <li><a href="#" class="menu-link">Sobre mim</a></li>
-            <li><a href="#" class="menu-link">Projetos</a></li>
+            <li><a href="#sobre-mim" class="menu-link ativo">Sobre mim</a></li>
+            <li><a href="#habilidades" class="menu-link">Habilidades</a></li>
+            <li><a href="#projetos" class="menu-link">Projetos</a></li>
           </ul>
         </nav>
         <!-- Botão Contato -->
         <div class="wk-contato">
-          <button class="btn-contato" onclick="window.location.href= 'https://wa.me/5585988423560?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20seus%20serviços%20de%20desenvolvimento%20web!'" >Contato</button>
-      </div>
+          <button
+            class="btn-contato"
+            onclick="window.location.href= 'https://wa.me/5585988423560?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20seus%20serviços%20de%20desenvolvimento%20web!'"
+          >
+            Contato
+          </button>
+        </div>
+        <!-- Menu Mobile -->
+        <div class="menu-mobile">
+          <div class="barra"></div>
+          <div class="barra"></div>
+        </div>
       </div>
     </header>
     <main>
-      <section class="topo-do-site">
+      <section id="sobre-mim" class="topo-do-site">
         <div class="jaelwk-dev">
           <div class="flex">
             <div class="jael-wilker-dev">
@@ -50,38 +63,172 @@
                   <img src="image/photo_jael.png" alt="Jael Wilker" />
                 </div>
               </div>
-              <div class="grid">
-                <div class="Descrição">
-                  <h2>Descrição</h2>
-                  <p>
-                    Sou um Desenvolvedor Full Stack apaixonado por tecnologia e inovação, com foco em criar landing pages, sistemas, soluções eficientes e impactantes para essa era digital. Minhas linguagens favoritas são <a class="python_description">Python</a> utilizando o <a  class='django_description'>Django</a> para criações de API's e <a class="react_description">React</a> para desenvolvimento web. 
-                  </p>
-                </div>
-                <div class="minha-missão">
-                  <h2>Minha missão</h2>
-                  <p>
-                    Minha missão como profissional de TI é contribuir de forma significativa para cada projeto que realizo, impactando positivamente as pessoas e os negócios envolvidos. Meu objetivo é criar soluções que não apenas atendam às necessidades dos clientes, mas que também se inspirem e faça a diferença. 
-                  </p>            
+              <div class="sobre-container">
+                <div class="grid">
+                  <div class="Descrição">
+                    <h2>Sobre mim</h2>
+                    <p>
+                      Sou um <a>Desenvolvedor</a> apaixonado por tecnologia e
+                      inovação, com foco em criação de soluções web eficientes e
+                      escaláveis. Gosto muito de trabalhar também com dados,
+                      análise e visualização de dados para apoiar a tomada de
+                      decisões informadas.
+                    </p>
+                  </div>
+                  <div class="minha-missão">
+                    <h2>Minha missão</h2>
+                    <p class="missão">
+                      Minha missão como profissional de TI é contribuir para o
+                      desenvolvimento de soluções tecnológicas que facilitem a
+                      vida das pessoas e impulsionem o crescimento dos negócios.
+                      Acredito no poder da tecnologia para transformar
+                      realidades!
+                    </p>
+                  </div>
                 </div>
               </div>
               <div class="container_cv">
-                <button  class="baixar_curriculo" onclick="baixarCV()">Baixar CV</button>
-             </div>
+                <button class="baixar_curriculo" onclick="baixarCV()">
+                  Baixar CV
+                </button>
+              </div>
             </div>
+          </div>
+        </div>
+      </section>
+      <section id="habilidades" class="habilidades">
+        <h2 class="section-title">Habilidades</h2>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <h3>🐍 Python Development</h3>
+            <p>Desenvolvimento de aplicações robustas e scripts de automação</p>
+            <div class="skill-tags">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">Django</span>
+              <span class="skill-tag">FastAPI</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <h3>📊 Análise de Dados</h3>
+            <p>
+              Análise exploratória, modelagem de dados e visualização e
+              estatística de dados complexos
+            </p>
+            <div class="skill-tags">
+              <span class="skill-tag">Excel</span>
+              <span class="skill-tag">PowerBi</span>
+              <span class="skill-tag">Pandas</span>
+              <span class="skill-tag">SQL</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <h3>🎨 Web Design</h3>
+            <p>Criação de interfaces responsivas e atraentes</p>
+            <div class="skill-tags">
+              <span class="skill-tag">HTML</span>
+              <span class="skill-tag">CSS</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">Figma</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <h3>🚀 Marketing Digital & SEO</h3>
+            <p>
+              Estratégias para aumentar a visibilidade online e otimização para
+              mecanismos de busca
+            </p>
+            <div class="skill-tags">
+              <span class="skill-tag">SEO</span>
+              <span class="skill-tag">Google Ads</span>
+              <span class="skill-tag">Facebook Ads</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <h3>🗄️ Database & Big Data</h3>
+            <p>Manipulação e análise de grandes volumes de dados</p>
+            <div class="skill-tags">
+              <span class="skill-tag">SQL</span>
+              <span class="skill-tag">NoSQL</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <h3>☁️ Cloud & DevOps</h3>
+            <p>Deploy e gerenciamento de soluções em nuvem</p>
+            <div class="skill-tags">
+              <span class="skill-tag">AWS</span>
+              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">Git</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projetos" class="projetos">
+        <h2 class="section-title">Projetos</h2>
+        <div class="projects-grid">
+          <a
+            href="https://github.com/JaelWilker/portifolio.dev"
+            target="_blank"
+            class="project-card-link"
+          >
+            <div class="project-card">
+              <img
+                src="image/site.jpg"
+                alt="Imagem do Projeto Portfólio"
+                class="project-image"
+              />
+              <h3>Meu Portfólio.dev</h3>
+              <p>
+                Este portfólio foi desenvolvido com código limpo e design
+                responsivo, focando em uma experiência de usuário intuitiva para
+                apresentar minhas habilidades e projetos.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">HTML</span>
+                <span class="project-tag">CSS</span>
+                <span class="project-tag">JavaScript</span>
+              </div>
+            </div>
+          </a>
+          <div class="project-card-placeholder">
+            <p>Em breve...</p>
+          </div>
+          <div class="project-card-placeholder">
+            <p>Em breve...</p>
           </div>
         </div>
       </section>
     </main>
     <footer>
+      <div class="footer-socials">
+        <a
+          href="https://github.com/JaelWilker"
+          target="_blank"
+          aria-label="GitHub"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a
+          href="https://www.instagram.com/jaelwk/"
+          target="_blank"
+          aria-label="Instagram"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/jaelwilker/"
+          target="_blank"
+          aria-label="LinkedIn"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+      </div>
       <p>
         Este site foi desenvolvido por <br />
         <b>©2025 Jael Wilker</b>. Todos os direitos reservados.
       </p>
     </footer>
-      <script>
-        function baixarCV() {
-          window.location.href = 'downloads/Curriculo_Jaelwk.pdf';
-        }
-      </script>
   </body>
 </html>

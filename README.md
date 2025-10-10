@@ -4,7 +4,7 @@ Este é o repositório do meu portfólio pessoal, uma página web desenvolvida p
 
 ## 🚀 Acesso
 
-**Você pode acessar a versão ao vivo do projeto aqui:** [**jaelwilker.dev**](https://jaelwilker.dev) (adicione seu link quando estiver online)
+**Você pode acessar a versão ao vivo do projeto aqui:** [**jaelwilker.dev**](https://bit.ly/portifolioDevWilker)
 
 ## 📸 Screenshot
 

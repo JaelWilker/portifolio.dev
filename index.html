@@ -24,7 +24,6 @@
   <body>
     <header>
       <div class="interface">
-        <!-- Menu Desktop -->
         <nav class="menu-desktop">
           <ul class="menu-lista">
             <li><a href="#sobre-mim" class="menu-link ativo">Sobre mim</a></li>
@@ -32,19 +31,20 @@
             <li><a href="#projetos" class="menu-link">Projetos</a></li>
           </ul>
         </nav>
-        <!-- Botão Contato -->
-        <div class="wk-contato">
-          <button
-            class="btn-contato"
-            onclick="window.location.href= 'https://wa.me/5585988423560?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20seus%20serviços%20de%20desenvolvimento%20web!'"
-          >
-            Contato
-          </button>
-        </div>
-        <!-- Menu Mobile -->
-        <div class="menu-mobile">
-          <div class="barra"></div>
-          <div class="barra"></div>
+        <div class="header-direita">
+          <div class="wk-contato">
+            <button
+              class="btn-contato"
+              onclick="window.location.href= 'https://wa.me/5585988423560?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20seus%20serviços%20de%20desenvolvimento%20web!'"
+            >
+              Contato
+            </button>
+          </div>
+          <div class="menu-mobile">
+            <div class="barra"></div>
+            <div class="barra"></div>
+            <div class="barra"></div>
+          </div>
         </div>
       </div>
     </header>
@@ -88,9 +88,13 @@
                 </div>
               </div>
               <div class="container_cv">
-                <button class="baixar_curriculo" onclick="baixarCV()">
-                  Baixar CV
-                </button>
+                <a
+                  href="archives/Curriculo_Desenvolvedor_Jael.pdf"
+                  target="_blank"
+                  class="baixar_curriculo"
+                >
+                  Baixar CV</a
+                >
               </div>
             </div>
           </div>
@@ -227,7 +231,8 @@
       </div>
       <p>
         Este site foi desenvolvido por <br />
-        <b>©2025 Jael Wilker</b>. Todos os direitos reservados.
+        <b>©<span id="current-year">2025</span> Jael Wilker</b>. Todos os
+        direitos reservados.
       </p>
     </footer>
   </body>

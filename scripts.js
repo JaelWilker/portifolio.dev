@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   mobileMenu.addEventListener("click", () => {
     navMenu.classList.toggle("aberto");
+    mobileMenu.classList.toggle("aberto");
     body.classList.toggle("menu-aberto");
   });
 
@@ -16,10 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
   navLinks.forEach((link) => {
     link.addEventListener("click", function (e) {
       e.preventDefault();
-
-      // Remove a classe 'ativo' de todos os links e a adiciona ao clicado
-      navLinks.forEach((l) => l.classList.remove("ativo"));
-      this.classList.add("ativo");
 
       const targetId = this.getAttribute("href");
       const targetSection = document.querySelector(targetId);
@@ -34,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Fecha o menu mobile após o clique
       if (navMenu.classList.contains("aberto")) {
         navMenu.classList.remove("aberto");
+        mobileMenu.classList.remove("aberto");
         body.classList.remove("menu-aberto");
       }
     });
@@ -42,26 +40,27 @@ document.addEventListener("DOMContentLoaded", () => {
   // Função para atualizar o link ativo ao rolar a página
   const sections = document.querySelectorAll("section[id]");
 
-  window.addEventListener("scroll", () => {
-    let current = "";
+  function updateActiveLink() {
+    const scrollY = window.pageYOffset;
+
     sections.forEach((section) => {
-      const sectionTop = section.offsetTop;
-      if (pageYOffset >= sectionTop - 90) {
-        // Ajuste para a altura do header
-        current = section.getAttribute("id");
-      }
-    });
+      const sectionHeight = section.offsetHeight;
+      const sectionTop = section.offsetTop - 90; // Ajuste para o header
+      const sectionId = section.getAttribute("id");
 
-    navLinks.forEach((link) => {
-      link.classList.remove("ativo");
-      if (link.getAttribute("href").includes(current)) {
+      const link = document.querySelector(`.menu-link[href*="${sectionId}"]`);
+
+      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
         link.classList.add("ativo");
+      } else {
+        link.classList.remove("ativo");
       }
     });
-  });
-});
+  }
 
-// Função para o botão de download do CV
-function baixarCV() {
-  window.location.href = "downloads/Curriculo_Jaelwk.pdf";
-}
+  window.addEventListener("scroll", updateActiveLink);
+
+  // --- Atualiza o ano do rodapé ---
+  document.getElementById("current-year").textContent =
+    new Date().getFullYear();
+});

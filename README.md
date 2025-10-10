@@ -26,6 +26,7 @@ Este é o repositório do meu portfólio pessoal, uma página web desenvolvida p
 
 O projeto foi construído utilizando as seguintes tecnologias:
 
+- **Figma**: Para o design e prototipação da interface (UI/UX).
 - **HTML5**: Para a estrutura e semântica do conteúdo.
 - **CSS3**: Para estilização, layout (Flexbox, Grid) e responsividade.
 - **JavaScript (ES6+)**: Para interatividade, como o menu mobile e o scroll spy.
